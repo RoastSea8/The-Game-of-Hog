@@ -1,3 +1,9 @@
+"""
+Aditya Tomar
+Utkarsh Agarwal
+Period 4
+"""
+
 """CS 61A Presents The Game of Hog."""
 
 from dice import six_sided, four_sided, make_test_dice
@@ -21,7 +27,18 @@ def roll_dice(num_rolls, dice=six_sided):
     assert type(num_rolls) == int, 'num_rolls must be an integer.'
     assert num_rolls > 0, 'Must roll at least once.'
     # BEGIN PROBLEM 1
-    "*** YOUR CODE HERE ***"
+    sum = 0
+    rolls = []
+
+    for i in range(num_rolls):
+        roll = dice()
+        rolls.append(roll)
+        sum += roll
+
+    if 1 in rolls:
+        return 1
+
+    return sum
     # END PROBLEM 1
 
 
