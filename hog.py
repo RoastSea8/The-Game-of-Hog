@@ -71,7 +71,10 @@ def take_turn(num_rolls, opponent_score, dice=six_sided, goal=GOAL_SCORE):
     assert num_rolls <= 10, 'Cannot roll more than 10 dice.'
     assert opponent_score < goal, 'The game should be over.'
     # BEGIN PROBLEM 3
-    "*** YOUR CODE HERE ***"
+    if not num_rolls:
+        return picky_piggy(opponent_score)
+
+    return roll_dice(num_rolls, dice)
     # END PROBLEM 3
 
 
