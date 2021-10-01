@@ -48,7 +48,10 @@ def picky_piggy(score):
     score:  The opponent's current score.
     """
     # BEGIN PROBLEM 2
-    "*** YOUR CODE HERE ***"
+    seven_starter = 7.14285
+    nthDigit = score % 6
+
+    return math.floor(seven_starter * pow(10, nthDigit)) % 10
     # END PROBLEM 2
 
 
